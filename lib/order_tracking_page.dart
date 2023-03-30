@@ -45,11 +45,11 @@ class _OrderTrackingPageState extends State<OrderTrackingPage> {
         
         title: const Center(
           child: Text(
-            
+
             "Track Orders",
             style: TextStyle(
               color: Colors.white,
-              fontSize: 16
+              fontSize: 15
             ),
           ),
         ),

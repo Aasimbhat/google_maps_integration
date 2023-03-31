@@ -138,6 +138,10 @@ class _OrderTrackingPageState extends State<OrderTrackingPage> {
         markers: {
         const  Marker(markerId: MarkerId("source"),
           position: sourceLocation,
+          infoWindow: const InfoWindow(
+            title: "Srinagar J&K",
+            snippet: "This is your starting point "
+          )
           ),
          const  Marker(markerId: MarkerId("destination"),
           position: destination,
@@ -177,6 +181,7 @@ class _OrderTrackingPageState extends State<OrderTrackingPage> {
                ),
           ],
         ),
+      
           
         //   items:[
         //   BottomNavigationBarItem(
@@ -200,7 +205,23 @@ class _OrderTrackingPageState extends State<OrderTrackingPage> {
         //     label: "home",
         //   )
         // ], ),
-         )   
+         ) ,
+         floatingActionButton:Container(
+          height: 60,
+          width: 60,
+          margin: const EdgeInsets.only(bottom:20,right: 300),
+           child: FloatingActionButton.extended(
+            backgroundColor: Color(0xFF6751B5),
+            onPressed: (){}, 
+            label: Icon(
+              Icons.directions,
+              size: 40,
+
+            ),
+          
+            ),
+         )
+          ,  
     );
   }
 }

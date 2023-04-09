@@ -13,29 +13,7 @@ class _OrderTrackingPageState extends State<OrderTrackingPage> {
     static const LatLng destination = LatLng(28.6139, 77.2090);
  List<LatLng> polylineCoordinates=[];
  
- void getPolyPoints()async{
-  PolylinePoints polylinePoints=PolylinePoints();
 
-  PolylineResult result=await polylinePoints.getRouteBetweenCoordinates("API_KEY",
-  PointLatLng(sourceLocation.latitude,sourceLocation.longitude),
-  PointLatLng(destination.latitude,destination.longitude),
-  
-  );
-  if(result.points.isEmpty){
-    result.points.forEach((PointLatLng point)=> polylineCoordinates.add(LatLng(point.latitude,point.longitude)
-    )
-    );
-    setState(() {
-      
-    });
-  }
- }
-
- @override
-  void initState() {
-    getPolyPoints();
-    super.initState();
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
